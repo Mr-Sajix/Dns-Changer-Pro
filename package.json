@@ -1,0 +1,20 @@
+{
+  "name": "dns-changer-pro",
+  "version": "1.0.0",
+  "description": "A lightweight Windows desktop application for managing Dns settings.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "dns",
+    "dns-changer",
+    "windows",
+    "electron"
+  ],
+  "author": "Sajad",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^45.3.0"
+  }
+}

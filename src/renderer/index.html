@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self';"
+    />
+
+    <title>DNS Changer Pro</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!-- Title Bar -->
+      <header class="titlebar">
+        <div class="titlebar-brand">
+          <div class="app-logo">D</div>
+          <span class="app-name">DNS Changer <strong>Pro</strong></span>
+        </div>
+
+        <div class="window-controls">
+          <button id="minimize-btn" class="window-btn minimize">&#8211;</button>
+          <button id="close-btn" class="window-btn close">&#10005;</button>
+        </div>
+      </header>
+
+      <!-- Dashboard -->
+      <main class="main-content">
+        <section class="dashboard-heading">
+          <div>
+            <h1>DNS Manager</h1>
+            <p>Manage and optimize your network connection.</p>
+          </div>
+
+          <div class="connection-status">
+            <span class="status-dot"></span>
+            <span>Ready</span>
+          </div>
+        </section>
+
+        <!-- Network Adapter -->
+        <section class="panel adapter-panel">
+          <div class="section-heading">
+            <h2>Network Adapter</h2>
+            <span class="section-label">NETWORK</span>
+          </div>
+
+          <div class="adapter-info">
+            <div class="adapter-icon">⌁</div>
+
+            <div class="adapter-details">
+              <strong>Network adapter</strong>
+              <span>Adapter detection will be available soon</span>
+            </div>
+
+            <div class="adapter-state">Not detected</div>
+          </div>
+        </section>
+
+        <!-- Current DNS -->
+        <section class="panel current-dns-panel">
+          <div class="section-heading">
+            <h2>Current DNS</h2>
+            <span class="section-label">CURRENT CONFIGURATION</span>
+          </div>
+
+          <div class="dns-values">
+            <div class="dns-value">
+              <span>Preferred DNS</span>
+              <strong>Not available</strong>
+            </div>
+
+            <div class="dns-value">
+              <span>Alternate DNS</span>
+              <strong>Not available</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- DNS Providers -->
+        <section class="providers-section">
+          <div class="section-heading">
+            <h2>DNS Providers</h2>
+            <span class="section-label">QUICK SELECT</span>
+          </div>
+
+          <div class="provider-grid">
+            <button class="provider-card" data-provider="cloudflare">
+              <span class="provider-name">Cloudflare</span>
+              <span class="provider-address">1.1.1.1</span>
+              <span class="provider-secondary">1.0.0.1</span>
+            </button>
+
+            <button class="provider-card" data-provider="google">
+              <span class="provider-name">Google</span>
+              <span class="provider-address">8.8.8.8</span>
+              <span class="provider-secondary">8.8.4.4</span>
+            </button>
+
+            <button class="provider-card" data-provider="quad9">
+              <span class="provider-name">Quad9</span>
+              <span class="provider-address">9.9.9.9</span>
+              <span class="provider-secondary">149.112.112.112</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Custom DNS -->
+        <section class="panel custom-dns-panel">
+          <div class="section-heading">
+            <h2>Custom DNS</h2>
+            <span class="section-label">MANUAL CONFIGURATION</span>
+          </div>
+
+          <div class="custom-dns-fields">
+            <div class="input-group">
+              <label for="primary-dns">Preferred DNS</label>
+              <input
+                type="text"
+                id="primary-dns"
+                placeholder="e.g. 1.1.1.1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="secondary-dns">Alternate DNS</label>
+              <input
+                type="text"
+                id="secondary-dns"
+                placeholder="e.g. 1.0.0.1"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="actions-section">
+          <button id="apply-btn" class="action-btn apply-btn">Apply DNS</button>
+
+          <button id="restore-btn" class="action-btn restore-btn">
+            Restore Previous DNS
+          </button>
+
+          <button id="flush-btn" class="action-btn flush-btn">Flush DNS</button>
+        </section>
+
+        <div id="status-message" class="status-message">
+          Select a DNS provider or enter custom DNS addresses.
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <span>DNS Changer Pro</span>
+        <span>Version 1.0.0</span>
+      </footer>
+    </div>
+
+    <script src="js/renderer.js"></script>
+  </body>
+</html>
