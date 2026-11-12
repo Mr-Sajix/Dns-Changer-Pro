@@ -24,6 +24,8 @@ async function loadNetworkAdapters() {
 
     const result = await window.electronAPI.getNetworkAdapters();
 
+    console.log('RAW NETWORK RESULT:', result);
+
     if (!result.success) {
       throw new Error(result.message);
     }
